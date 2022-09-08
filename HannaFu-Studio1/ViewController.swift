@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var XiaoImage: UIImageView!
     
+    @IBOutlet weak var Opacity: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,9 +24,10 @@ class ViewController: UIViewController {
         print("i want to death")
     }
     
-    @IBAction func SliderMoved(_ sender: Any) {
-        print("inside Slider")
+    @IBAction func sliderMoved(_ sender: Any) {
+        //print("inside Slider")
         XiaoImage.layer.opacity = Slider.value
+        Opacity.text = String(Int(Slider.value * 100))
     }
     
 }
